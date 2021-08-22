@@ -16,7 +16,7 @@ body {
     background-size: contain;
     background-position-y: -14%;
     position: relative; 
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 2rem;
 
     &:before {
@@ -111,7 +111,7 @@ body {
 @media screen and (max-width:1000px) {
     .background {
         position: relative; 
-        height: 120vh;
+        min-height: 120vh;
         background-position-y: top;
         background-size: 200%;
         
