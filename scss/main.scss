@@ -12,8 +12,8 @@ body {
 }
 
 .background {
-    background: url("../images/pattern-background-desktop.svg") no-repeat;
-    background-size: 100vw auto;
+    background: url("../images/pattern-background-desktop.svg") no-repeat top center;
+    background-size: contain;
     background-position-y: -14%;
     position: relative; 
     height: 100vh;
@@ -108,13 +108,29 @@ body {
     margin-left: 1.8rem; 
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:1000px) {
     .background {
-        background: url("../images/pattern-background-desktop.svg") no-repeat;
-        background-position-x: 60%;
-        background-position-y: -35%;
         position: relative; 
         height: 120vh;
+        background-position-y: top;
+        background-size: 200%;
+        
+        &:before {
+        content: '';
+        background-color: rgba(183, 199, 243, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+        }
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:1200px) {
+    .background {
+        background-size: 100% auto;
+        position: relative; 
         
         &:before {
         content: '';
